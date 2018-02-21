@@ -1,0 +1,23 @@
+{
+  "name": "autocompletefield",
+  "version": "1.0.0",
+  "main": "javascript/dist/AutocompleteField.js",
+  "license": "MIT",
+  "engines": {
+    "node": "7.9.0",
+    "npm": "4.2.0"
+  },
+  "scripts": {
+    "once": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {
+    "laravel-mix": "^1.7.2",
+    "v-autocomplete": "^1.8.1",
+    "vue": "^2.5.13"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.3"
+  }
+}
