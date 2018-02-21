@@ -1,0 +1,22 @@
+{
+    "name": "benmanu/silverstripe-autocomplete",
+    "description": "Autocomplete field that can be used as a SilverStripe form field",
+    "type": "silverstripe-module",
+    "homepage": "http://github.com/benmanu/silverstripe-autocomplete",
+    "keywords": ["silverstripe", "autocomplete", "form", "field"],
+    "license": "BSD-3-Clause",
+    "authors": [
+      {"name": "Ben Manu","email": "ben@silverstripe.com"},
+      {"name": "Tim Kung","email": "tkung@silverstripe.com"}
+    ],
+    "support": {
+      "issues": "http://github.com/benmanu/silverstripe-autocomplete/issues"
+    },
+    "require": {
+      "silverstripe/cms": "~3.1",
+      "silverstripe/framework": "~3.1"
+    },
+    "extra": {
+      "installer-name": "autocomplete"
+    }
+  }
