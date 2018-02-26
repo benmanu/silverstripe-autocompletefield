@@ -50,7 +50,7 @@ class AutocompleteField extends TextField
     public function Field($properties = [])
     {
         // add in custom javasctript to handle autocompletion
-        Requirements::javascript('autocompletefield/javascript/dist/AutocompleteField.js');
+        Requirements::javascript('autocomplete/javascript/dist/AutocompleteField.js');
 
         return parent::Field($properties);
     }
