@@ -5,7 +5,7 @@
       v-model="item"
       :min-len="1"
       :auto-select-one-item="false"
-      :input-attrs="getAttributes"
+      :input-attrs="attributes"
       @update-items="updateItems"
     >
     </v-autocomplete>
@@ -15,9 +15,10 @@
 <script>
   export default {
     props: {
-      name: String,
-      classes: String,
-      placeholder: String,
+      attributes: {
+        type: Object,
+        required: false,
+      },
       maxSuggestions: {
         type: Number,
         required: false,
@@ -33,13 +34,7 @@
       return {
         data: this.suggestionData ? this.suggestionData : [],
         items: [],
-        item: null,
-        getAttributes: {
-          name: this.name,
-          class: this.classes,
-          placeholder: this.placeholder,
-          autocomplete: 'off',
-        },
+        item: null
       };
     },
 
@@ -47,9 +42,9 @@
       /**
        * This is called whenever a change event occurs on the v-autocomplete
        * field.
-       * 
+       *
        * @param {String} query
-       * 
+       *
        * @return void
        */
       updateItems(query) {
@@ -59,9 +54,9 @@
       /**
        * Helper to take in the query from the field and determine which
        * suggestions from our data set match.
-       * 
+       *
        * @param {String} query
-       * 
+       *
        * @return {Array}
        */
       findSuggestions(query) {
@@ -85,10 +80,10 @@
       /**
        * Helper to determine if the provided question contains all the provided
        * words.
-       * 
+       *
        * @param {String} question
        * @param {Array} words
-       * 
+       *
        * @return {Boolean}
        */
       matchAllWords(question, words) {

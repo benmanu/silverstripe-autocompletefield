@@ -79,13 +79,14 @@ class AutocompleteField extends TextField
     }
 
     /**
-     * Helper to retrieve the placeholder attribute.
+     * Helper to get all field attributes set on input field
      *
-     * @return string|null
+     * @return string
      */
-    public function getPlaceholder()
+    public function getFieldAttributes()
     {
-        return $this->getAttribute('placeholder');
+        $attributes = $this->getAttributes();
+        $attributes['autocomplete'] = 'off';
+        return htmlspecialchars(json_encode($attributes), ENT_QUOTES, 'UTF-8');
     }
-
 }

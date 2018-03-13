@@ -1,7 +1,5 @@
 <autocomplete-field
-  name="{$Name}"
-  classes="{$extraClass}"
-  placeholder="{$Placeholder}"
+  <% if $FieldAttributes %>:attributes="{$FieldAttributes}"<% end_if %>
   <% if $SuggestionData %>:suggestion-data="{$SuggestionData}"<% end_if %>
 >
 </autocomplete-field>
