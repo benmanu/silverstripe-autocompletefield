@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "laravel-mix": "^1.7.2",
-    "v-autocomplete": "^1.8.1",
+    "v-autocomplete": "github:GorbunovStudio/v-autocomplete",
     "vue": "^2.5.13"
   },
   "devDependencies": {
